@@ -1,20 +1,20 @@
 import React from "react";
-import {
-  GoogleMap,
-  withScriptjs,
-  withGoogleMap,
-  Marker,
-} from "react-google-maps";
+import GoogleMapReact from "google-map-react";
+import Marker from "./Marker";
+const API_KEY = "AIzaSyCi_yGvhuZB5j4HOoIHU84pq5QAVWUrJsc";
 
-const MapView = withScriptjs(
-  withGoogleMap((props) => (
-    <GoogleMap
-      defaultZoom={8}
-      defaultCenter={{ lat: props.lat, lng: props.lng }}
-    >
-      <Marker position={{ lat: -34.397, lng: 150.644 }} />
-    </GoogleMap>
-  ))
-);
+const MapView = (props) => {
+  return (
+    <div style={{ height: "40vh", width: "100%" }}>
+      <GoogleMapReact
+        bootstrapURLKeys={{ key: API_KEY }}
+        defaultZoom={18}
+        defaultCenter={{ lat: props.lat, lng: props.lng }}
+      >
+        <Marker lat={props.lat} lng={props.lng} />
+      </GoogleMapReact>
+    </div>
+  );
+};
 
 export default MapView;

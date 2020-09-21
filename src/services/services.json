@@ -5,8 +5,8 @@
   "email": "andrebordignonn@gmail.com",
   "status": "active",
   "location": {
-    "latitude": "-24.9569075",
-    "longitude": "-53.4658602",
+    "latitude": -24.9569075,
+    "longitude": -53.4658602,
     "address": {
       "street": "Av. Brasil",
       "number": "4019",

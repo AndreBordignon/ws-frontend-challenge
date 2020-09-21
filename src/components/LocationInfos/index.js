@@ -2,21 +2,16 @@ import React from "react";
 import MapView from "../MapView";
 
 import { Container, BoxInfos, BoxTitle } from "./styles.js";
+import services from "../../services/services.json";
 
-const API_KEY = "AIzaSyCi_yGvhuZB5j4HOoIHU84pq5QAVWUrJsc";
 const LocationInfo = () => {
+  const { location } = services,
+    { latitude, longitude, address } = location;
   return (
     <Container>
       <BoxInfos>
         <BoxTitle>Localização</BoxTitle>
-        <MapView
-          googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${API_KEY}&v=3.exp&libraries=geometry,places`}
-          loadingElement={<div style={{ height: `100%` }} />}
-          containerElement={<div style={{ height: `300px` }} />}
-          mapElement={<div style={{ height: `100%` }} />}
-          lat={-24.9569075}
-          lng={-53.4658602}
-        />
+        <MapView lat={latitude} lng={longitude} />
       </BoxInfos>
     </Container>
   );
