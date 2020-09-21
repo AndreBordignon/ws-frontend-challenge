@@ -1,0 +1,40 @@
+{
+  "username": "André Bordignon",
+  "company": "Wealth Systems",
+  "phone": "45998253744",
+  "email": "andrebordignonn@gmail.com",
+  "status": "active",
+  "location": {
+    "latitude": "-24.9569075",
+    "longitude": "-53.4658602",
+    "address": {
+      "street": "Av. Brasil",
+      "number": "4019",
+      "adressName": "Trabalho"
+    }
+  },
+  "oportunities": {
+    "won": {
+      "quantity": 4,
+      "value": "2000000"
+    },
+    "lost": {
+      "quantity": 1,
+      "value": "430000"
+    },
+
+    "open": {
+      "quantity": 3,
+      "value": "2000000"
+    },
+
+    "discard": {
+      "quantity": 8,
+      "value": "32000"
+    }
+  },
+  "creditCard": {
+    "limit": "1200020",
+    "remaining": "310500"
+  }
+}
