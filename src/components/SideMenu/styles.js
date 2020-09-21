@@ -8,6 +8,12 @@ export const Container = styled.div`
   height: 100%;
   position: absolute;
 `;
+export const IconButton = styled.button`
+  border: none;
+  background-color: #fff;
+  width: 50px;
+  justify-content: center;
+`;
 export const Icon = styled.img`
   width: 20px;
   height: 20px;

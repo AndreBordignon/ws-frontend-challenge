@@ -1,16 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 
-import { Container, Icon } from "./styles";
+import { Container, Icon, IconButton } from "./styles";
+import SearchBox from "../SearchBox";
 import search from "../../assets/img/icons/search.png";
+import user from "../../assets/img/icons/user.svg";
 
 function SideMenu({ menuOpen }) {
+  const [searchActive, setSearchActive] = useState(false);
   return (
     <Container menuOpen={menuOpen}>
-      <Icon src={search} alt="pesquisar" />
-      <Icon src={search} alt="pesquisar" />
-      <Icon src={search} alt="pesquisar" />
-      <Icon src={search} alt="pesquisar" />
-      <Icon src={search} alt="pesquisar" />
+      <IconButton onClick={() => setSearchActive(!searchActive)}>
+        <Icon src={search} alt="pesquisar" />
+      </IconButton>
+      <SearchBox searchActive={searchActive} />
+
+      <IconButton>
+        <Icon src={user} alt="userinfo" />
+      </IconButton>
     </Container>
   );
 }

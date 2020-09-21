@@ -5,7 +5,7 @@ const API_KEY = "AIzaSyCi_yGvhuZB5j4HOoIHU84pq5QAVWUrJsc";
 
 const MapView = (props) => {
   return (
-    <div style={{ height: "40vh", width: "100%" }}>
+    <div style={{ height: "400px", width: "100%" }}>
       <GoogleMapReact
         bootstrapURLKeys={{ key: API_KEY }}
         defaultZoom={18}
